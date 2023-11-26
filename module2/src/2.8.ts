@@ -3,10 +3,12 @@
 
   //basic promise
 
+  type Something = { something: string };
+
   // simulate
-  const createPromise = (): Promise<string> => {
-    return new Promise<string>((resolve, reject) => {
-      const data: string = "something";
+  const createPromise = (): Promise<Something> => {
+    return new Promise<Something>((resolve, reject) => {
+      const data: Something = { something: "something" };
       if (data) {
         resolve(data);
       } else {
@@ -16,8 +18,8 @@
   };
 
   //calling create promise function
-  const showData = async () => {
-    const data = await createPromise();
+  const showData = async (): Promise<Something> => {
+    const data: Something = await createPromise();
     return data;
   };
 
