@@ -46,3 +46,5 @@
 
   //
 }
+
+//npx ts-node-dev --respawn your-file.ts
